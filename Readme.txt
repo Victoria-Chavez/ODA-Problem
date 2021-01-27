@@ -18,5 +18,23 @@ Below we explain the content of each folder.
             destination 2, the probability of takin line 1 to go from node 3 to node 2 is 0.5.
           - vob5Nodes2Lines.csv. These data correspons to the observed flows in the transit segments. Column 1 and column 1 are indexes that can be ignored. Column 2 is the line
             identifier, columns 3 and 4 represents the beginnig and the end of the transit segment, respectively, and column 5 represents the observed flow. So we can see that in
-            the transit segment of line 1 that connects nodes 3 and 2, beginning in 3 and ending in 2, 12308 trips were observed. 
-
+            the transit segment of line 1 that connects nodes 3 and 2, beginning in 3 and ending in 2, 12308 trips were observed.
+ - Resultados_Lineal. Contains .txt files with the parammeters used in the model, the CPU time, the values of the estimated demand, the excat demand, the target demand and the
+            corresponding deficit and excess for each origin-destination pair (p,q). Next we can see the observed and the computed flows for each transit segment (l,i,j). 
+ - Resultados_Lineal_Def. Contains .txt files with the parammeters used in the model when only a deficit in the demand is considered, the CPU time, the values of the estimated
+            demand, the excat demand, the target demand and the corresponding deficit and excess for each origin-destination pair (p,q). Next we can see the observed and the
+            computed flows for each transit segment (l,i,j). For example, to obtain these results for the instance with 5 nodes and 2 lines, the model should be fed with the
+            following data sets: matrizobsoleta5Nodes2Lines_Def.csv, matrizreal5Nodes2Lines.csv, proporciones5Nodes2Lines.csv and vobs5Nodes2Lines.csv
+  - Resultados_Lineal_Exc. Contains .txt files with the parammeters used in the model when only an excess in the demand is considered, the CPU time, the values of the estimated
+            demand, the excat demand, the target demand and the corresponding deficit and excess for each origin-destination pair (p,q). Next we can see the observed and the
+            computed flows for each transit segment (l,i,j). For example, to obtain these results for the instance with 5 nodes and 2 lines, the model should be fed with the
+            following data sets: matrizobsoleta5Nodes2Lines_Exc.csv, matrizreal5Nodes2Lines.csv, proporciones5Nodes2Lines.csv and vobs5Nodes2Lines.csv
+  - Resultados_Lineal_eps. Contains .txt files with the parammeters used in the model when a small change in the probabiities is considered, the CPU time, the values of the
+            estimated demand, the excat demand, the target demand and the corresponding deficit and excess for each origin-destination pair (p,q). Next we can see the observed 
+            and the computed flows for each transit segment (l,i,j). For example, to obtain these results for the instance with 5 nodes and 2 lines, the model should be fed with
+            the following data sets: matrizobsoleta5Nodes2Lines.csv, matrizreal5Nodes2Lines.csv, proporciones5Nodes2Lines.csv and vobs5Nodes2Lines_eps.csv
+  - Resultados_Lineal_vol. Contains .txt files with the parammeters used in the model when only the half of the transit segments are considered to have available counts, the CPU
+            time, the values of the estimated demand, the excat demand, the target demand and the corresponding deficit and excess for each origin-destination pair (p,q). Next
+            we can see the observed and the computed flows for each transit segment (l,i,j). For example, to obtain these results for the instance with 5 nodes and 2 lines, the
+            model should be fed with the following data sets: matrizobsoleta5Nodes2Lines_Def.csv, matrizreal5Nodes2Lines.csv, proporciones5Nodes2Lines_vol.csv and 
+            vobs5Nodes2Lines_vol.csv
